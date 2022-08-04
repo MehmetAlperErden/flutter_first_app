@@ -8,24 +8,42 @@ class myApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(primaryColor: Colors.purple , accentColor: Colors.purple),
+      theme: ThemeData(primaryColor: Colors.purple, accentColor: Colors.purple),
       home: Scaffold(
+        backgroundColor: Colors.yellow,
         appBar: AppBar(
-          backgroundColor: Colors.black,
+          backgroundColor: Colors.black ,
           title: Text(
             "Baslik",
           ),
         ),
-        
-        body: Text('Hello World',
-        style: TextStyle(
-          color: Colors.red, fontSize: 24, fontWeight: FontWeight.w500)),
+        body: Center(
+          child: Container(
+            width: 100,
+            height: 100,
+            color: Colors.red,
+            alignment: Alignment.center, 
+              child: Container(
+                alignment: Alignment.center,
+                width: 100,
+                height: 100,
+                color: Colors.blue,
+                child: Text('Mehmet Alper Erden'),
+                
 
+            )
+            ,
+          ),
+        ),
+        
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             debugPrint('Tiklanilid');
-            
-          },child: Icon(Icons.no_accounts_sharp,color: Colors.red,),
+          },
+          child: Icon(
+            Icons.no_accounts_sharp,
+            color: Colors.red,
+          ),
         ),
       ),
     );
